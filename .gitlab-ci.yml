@@ -1,0 +1,10 @@
+before_script:
+    - npm i
+
+stages:
+    - build
+
+build:
+    stage: build
+    script:
+        - npm run docs:build

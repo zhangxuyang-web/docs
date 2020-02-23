@@ -1,23 +1,24 @@
 module.exports = {
-    title: '我的前端技术栈',
+    title: '张栩瑒的前端知识栈',
     description: '记录前端技术积累笔记',
-    dest: './docs',
+    dest: './docs/',
     // 注入到当前页面的 HTML <head> 中的标签
     head: [
         ['link', { rel: 'icon', href: '/favicon.ico' }] // 增加一个自定义的 favicon(网页标签的图标)
     ],
-    base: '/', // 这是部署到github相关的配置 下面会讲
+    base: '/docs/', // 这是部署到github相关的配置 下面会讲
     markdown: {
         lineNumbers: false // 代码块显示行号
     },
+    extraWatchFiles: ['../**/*.md'],
     themeConfig: {
         sidebarDepth: 2, // e'b将同时提取markdown中h2 和 h3 标题，显示在侧边栏上。
-        lastUpdated: 'Last Updated', // 文档更新时间：每个文件git最后提交的时间
+        lastUpdated: '最后更新', // 文档更新时间：每个文件git最后提交的时间
         displayAllHeaders: true,
         sidebar: [
             {
                 title: 'JavaScript基础',
-                children: ['/javascript-base/0']
+                children: ['/javascript-base/0', '/javascript-base/1']
             },
             {
                 title: 'HTML和CSS',
